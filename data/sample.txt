@@ -1,0 +1,12 @@
+RAG stands for Retrieval-Augmented Generation.
+
+An embedding is a vector of numbers that represents the semantic meaning
+of text. Semantically similar text tends to produce nearby vectors.
+
+In this project, SentenceTransformers creates embeddings locally for free.
+ChromaDB stores the embeddings, original text chunks, and metadata.
+
+When a user asks a question, SentenceTransformers embeds the question.
+ChromaDB searches for the nearest document vectors and returns the
+corresponding original text chunks. Those chunks are then sent to a
+language model hosted through the Groq API to generate the final answer.
